@@ -10,7 +10,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		
 		
-		
+		<style>
+			.field_soma {
+				width: 100vw;
+    			display: flex;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -22,6 +27,31 @@
 					{{ 'Nome: ' + nome.nome + ', Idade: ' + nome.idade }}
 				</li>
 			</ul>
+
+			<hr>
+
+			<div class="field_soma">
+				<span> {{ n1 }} + {{ n2 }} = &nbsp;</span>
+				<input type="text" v-model="n3" />
+				<p v-if="n1 + n2 == parseInt(n3)">ACERTOU!!</p>
+				<p v-if="n3 != '0' && n1 + n2 != parseInt(n3)">ERROU!!</p>
+			</div>
+
+			<div>{{ mostrar(nome) }}</div>
+			<div>{{ testar() }}</div>
+
+			<div v-for="pais in paises()">
+				<p v-html="pais.bandeira"></p>
+				<p v-html="pais.continente"></p>
+			</div>
+
+			<hr>
+
+			<brasil></brasil>
+
+			<hr>
+
+			<pais :nome="chile"></pais>
 
 		</div>
 
