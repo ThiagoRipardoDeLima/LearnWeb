@@ -23,6 +23,18 @@
 
 				{{ carregado ? 'SIM' : 'NÂO' }}
 
+				
+
+				<a :href="url">clique aqui</a>
+				<hr>
+				<br>
+				<label for="contato">Nome do Contato</label>
+				<br>
+				<input type="text" v-model="contato">
+				
+
+				<button @click="btnClick">adicionar</button>
+
 			</section>
 			<aside class="container__sidebar">
 
@@ -31,6 +43,14 @@
 				<hr>
 
 				{{ nome.split('').reverse().join('') }}
+
+				<hr>
+
+				<h3>Lista de Contatos (Total: {{ contatos.length }})</h3>
+
+				<ul>
+					<li v-for="contato in contatos">{{ contato }}</li>
+				</ul>
 
 			</aside>
 		</section>
@@ -41,6 +61,6 @@
 		</footer>
 	</div>
 
-	<script src="script.js"></script>
+	<script src="script1.js"></script>
 </body>
 </html>

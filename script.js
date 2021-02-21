@@ -21,7 +21,7 @@ Vue.component('pais', {
     props:['nome'],
     template: "<p v-html='nome'></p>"
 });
-
+/*
 let lista = new Vue({
     el:'#lista',
     data:{
@@ -61,3 +61,4 @@ let lista = new Vue({
 });
 
 lista.pais = 'brasil';
+*/
