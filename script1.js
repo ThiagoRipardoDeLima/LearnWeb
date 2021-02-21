@@ -1,6 +1,6 @@
 function adicionarContato($nome)
 {
-    this.contatos.push($nome);
+    $nome.contatos.push($nome.contato);
 }
 
 let app = new Vue({
@@ -20,8 +20,8 @@ let app = new Vue({
         btnClick: function() {
             if(this.contato.length == 0)return;
             //alert(this.contato);
-            //adicionarContato(this.contato);
-            this.contatos.push(this.contato);
+            adicionarContato(this);
+            //this.contatos.push(this.contato);
         }
     }
 });
